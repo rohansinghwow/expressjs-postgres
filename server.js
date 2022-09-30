@@ -3,6 +3,11 @@ const app = express()
 const cors = require('cors')
 const pool = require('./db')
 
+const port = process.env.PORT
+
+require('dotenv').config()
+
+
 //middleware
 app.use(cors())
 app.use(express.json());
@@ -41,3 +46,6 @@ app.get('/search', async (req, res) => {
     }
 })
 
+app.listen(port, () => {
+    console.log(`Server at ${port}`)
+})
