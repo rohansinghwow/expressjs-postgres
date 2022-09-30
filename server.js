@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const pool = require('./db')
-const DATA = require('./src/DATA.json')
+
 //middleware
 app.use(cors())
 app.use(express.json());
